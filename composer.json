@@ -1,0 +1,48 @@
+{
+  "name": "tungnd92/laravel-nganluong",
+  "version": "1.0.0",
+  "type": "library",
+  "description": "NganLuong service SDK for Laravel and Lumen",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "keywords": [
+    "nganluong",
+    "laravel-nganluong"
+  ],
+  "authors": [
+    {
+      "name": "TungND",
+      "email": "tungnd2.work@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "ext-curl": "*",
+    "illuminate/support": "^8.0|^9.0",
+    "illuminate/config": "^8.0|^9.0",
+    "illuminate/http": "^8.0|^9.0",
+    "guzzlehttp/guzzle": "^6.0|^7.0",
+    "bensampo/laravel-enum": "^4.1|^5.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0|^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Laravel\\NganLuong\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Laravel\\NganLuong\\NLServiceProvider"
+      ],
+      "aliases": {
+        "NganLuong": "Laravel\\NganLuong\\Facades\\NganLuong"
+      }
+    }
+  }
+}
